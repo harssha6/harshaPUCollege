@@ -9,6 +9,7 @@ export const POST: APIRoute = async ({ request }) => {
   const email = data.get("email") as string;
   const campus = data.get("campus") as string;
   const stream = data.get("stream") as string;
+  const facility = data.get("facility") as string;
   const whatsappConsent = data.get("whatsappConsent") as string;
   const formData = new FormData();
   formData.append("Student Name", studentName);
@@ -17,6 +18,7 @@ export const POST: APIRoute = async ({ request }) => {
   formData.append("Email", email);
   formData.append("Campus", campus);
   formData.append("Stream", stream);
+  formData.append("Residential facility", facility);
   formData.append("Date_Time", new Date().toLocaleString('en-GB', { timeZone: 'IST' }));
   formData.append("Whatsapp Consent", whatsappConsent === 'on' ? 'Yes' : 'No');
 
