@@ -74,40 +74,8 @@ console.log("apiReponse -->", JSON.stringify(apiResponse.branches, null, 2))
         </svg>
       </InputIcon>
       
-      <!-- <Select
-        placeholder="Choose Campus"
-        id="selectBranch"
-        title="Please select a Campus"
-        options={apiResponse.branches.map(branch => branch.BranchName)}
-        defaultValue={selectedCampus}
-        name="campus"
-        required
-      />   -->
 
-      <!-- <SelectPill
-        placeholder="Select Grade"
-        id="selectDisabled"
-        title="Please select a grade"
-        options={[
-          "Pre-Primary 1",
-          "Pre-Primary 2",
-          "Pre-Primary 3",
-          "Grade 1",
-          "Grade 2",
-          "Grade 3",
-          "Grade 4",
-          "Grade 5",
-          "Grade 6",
-          "Grade 7",
-          "Grade 8",
-          "Grade 9",
-          "Grade 10",
-          "Grade 11",
-          "Grade 12",
-        ]}
-        name="selectDisabled"
-        disabled
-      /> -->
+      
       <SelectPill
         placeholder="Select Stream"
         id={"stream"}
@@ -120,6 +88,18 @@ console.log("apiReponse -->", JSON.stringify(apiResponse.branches, null, 2))
           'PU Commerce (HEBA)',
         ]}
         name={"stream"}
+        required
+      />
+      
+      <Select
+        placeholder="Residential facility required?"
+        id={"stream"}
+        title="Please select an option"
+        options={[
+          'Yes',
+          'No',
+        ]}
+        name={"facility"}
         required
       />
 
